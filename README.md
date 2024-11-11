@@ -1,6 +1,20 @@
-# TodoListWithRouter
+# Todo List ver API
 
-This template should help get you started developing with Vue 3 in Vite.
+此專案可透過 API 進行使用者的身份認證，並處理待辦事項的新增、修改、刪除等等
+
+![img](https://i.imgur.com/SoSuIqf.jpeg)
+
+## Feature
+
+- 創立帳號
+- 登入 / 登出
+- 新增待辦事項
+- 修改待辦事項
+- 刪除待辦事項
+
+## Screenshots
+
+![img](https://i.imgur.com/X8Ok48Y.jpeg)
 
 ## Recommended IDE Setup
 
@@ -27,3 +41,22 @@ npm run dev
 ```sh
 npm run build
 ```
+
+## Folder Structure
+
+- views
+  - 頁面
+- stylesheets
+  - 客製 BS5 樣式
+- router
+  - 路徑
+- assets
+  - 靜態資源放置處
+
+## Project Technologies
+
+- Vue.js
+- Vue Router
+- Vite
+- Axios
+- Bootstrap5
