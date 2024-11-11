@@ -6,7 +6,7 @@ const apiUrl = `https://todoo.5xcamp.us`
 </script>
 
 <template>
-  <div class="wallpaper">
+  <div>
     <RouterView :apiUrl="apiUrl"/>
   </div>
 
