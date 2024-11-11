@@ -13,6 +13,7 @@ let token = sessionStorage.getItem('token')
 
 
 
+
 getTodos()
 function getTodos() {
   axios.get(`${props.apiUrl}/todos`, {
@@ -139,6 +140,7 @@ function completed() {
 }
 
 
+
 </script>
 
 
@@ -157,9 +159,9 @@ function completed() {
           <button type="submit" class="btn btn-primary" id="addTodo" @click="addTodo">Add</button>
         </div>
         <div class="row row-cols-3 btn-group g-1 mb-3 w-100">
-          <button class="btn btn-outline-primary col text-dark" @click="all()">All</button>
-          <button class="btn btn-outline-primary col text-dark" @click="pending()">Pending</button>
-          <button class="btn btn-outline-primary col text-dark" @click="completed()">Completed</button>
+          <button class="btn btn-outline-primary col text-dark" @click="all()" :class="{ 'active': filterType === 'all' }">All</button>
+          <button class="btn btn-outline-primary col text-dark" @click="pending()" :class="{ 'active': filterType === 'pending' }" >Pending</button>
+          <button class="btn btn-outline-primary col text-dark" @click="completed()" :class="{ 'active': filterType === 'completed' }">Completed</button>
         </div>
         <ul id="list" class="list-unstyled accordion">
           <li class="accordion-item" v-for="todo in filteredTodos" :key="todo.id">
@@ -186,3 +188,7 @@ function completed() {
     </div>
   </div>
 </template>
+
+<style scoped>
+
+</style>
